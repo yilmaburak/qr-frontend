@@ -1,12 +1,19 @@
+import { useState } from 'react';
 import Sidebar from './Sidebar';
 import TopBar from './TopBar';
 
 function DashboardLayout({ children }) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
   return (
     <>
-      <Sidebar />
-      <TopBar />
-      <main className="ml-64 p-4">
+      <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
+      <TopBar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
+      <main
+        className={`${
+          isSidebarOpen ? 'ml-64' : 'ml-16'
+        } p-4 transition-all duration-300`}
+      >
         {children}
       </main>
     </>
