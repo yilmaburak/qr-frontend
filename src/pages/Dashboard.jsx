@@ -41,7 +41,7 @@ function Dashboard() {
   };
 
   const handleCopyLink = (id) => {
-    const publicUrl = `http://localhost:5173/public/qr/${id}`;
+    const publicUrl = `http://localhost:5173/public/qr/image/${id}`;
     navigator.clipboard.writeText(publicUrl).then(() => {
       alert('Public link copied to clipboard!');
     });
@@ -85,10 +85,10 @@ function Dashboard() {
               <h2 className="font-bold text-lg mb-2">{qr.title}</h2>
               <p className="text-sm mb-2">{qr.description}</p>
               <img
-                src={`http://localhost:8080/api/qrcodes/${qr.id}/image`}
-                alt={qr.title}
-                className="w-32 h-32 mb-2"
-              />
+  src={`http://localhost:8080/api/public/qr/image/${qr.publicId}`}
+  alt={qr.title}
+  className="w-32 h-32"
+/>
               <div className="flex flex-wrap space-x-2 mt-2">
                 <button
                   onClick={() => navigate(`/dashboard/edit/${qr.id}`)}
