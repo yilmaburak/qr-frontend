@@ -14,6 +14,9 @@ function CreateQR() {
   const [logoFile, setLogoFile] = useState(null);
   const [logoPreview, setLogoPreview] = useState(null);
   const [logoBase64, setLogoBase64] = useState(null);
+  const [backgroundImageFile, setBackgroundImageFile] = useState(null);
+  const [backgroundImageBase64, setBackgroundImageBase64] = useState(null);
+  const [backgroundImagePreview, setBackgroundImagePreview] = useState(null);
   const [foregroundColor, setForegroundColor] = useState('#000000');
   const [backgroundColor, setBackgroundColor] = useState('#ffffff');
   const [style, setStyle] = useState('square');
@@ -37,6 +40,23 @@ function CreateQR() {
     reader.readAsDataURL(file);
   };
 
+  //YENİ
+  const handleBackgroundImageChange = (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  setBackgroundImageFile(file);
+  setBackgroundImagePreview(URL.createObjectURL(file));
+
+  const reader = new FileReader();
+  reader.onloadend = () => {
+    const base64 = reader.result.split(',')[1]; // sadece data kısmı
+    setBackgroundImageBase64(base64);
+  };
+  reader.readAsDataURL(file);
+  };
+
+
   const generateQR = () => {
     if (!content || !canvasRef.current) return;
 
@@ -53,6 +73,7 @@ function CreateQR() {
       },
       backgroundOptions: {
         color: backgroundColor,
+        image: backgroundImagePreview || undefined, // background görseli burada!
       },
       imageOptions: {
         crossOrigin: 'anonymous',
@@ -69,18 +90,20 @@ function CreateQR() {
     if (content) {
       generateQR();
     }
-  }, [content, foregroundColor, backgroundColor, logoPreview, style]);
+  }, [content, foregroundColor, backgroundColor, logoPreview, backgroundImagePreview, style]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await axios.post('/qrcodes', {
-        content,
-        title,
-        description,
-        logoBase64,
-        foregroundColor,
-        backgroundColor,
+      content,
+      title,
+      description,
+      logoBase64,
+      backgroundImageBase64, // ✅ yeni eklendi
+      foregroundColor,
+      backgroundColor,
+      style, //stil backend'e gönderiliyor
       });
       toast.success('QR Code başarıyla oluşturuldu!');
       setTimeout(() => {
@@ -175,6 +198,18 @@ function CreateQR() {
               />
             )}
           </div>
+          <div className="mb-4">
+            <label className="block mb-1 font-medium">Background Image (optional)</label>
+            <input type="file" accept="image/*" onChange={handleBackgroundImageChange} />
+            {backgroundImagePreview && (
+              <img
+                src={backgroundImagePreview}
+                alt="Background Preview"
+                className="mt-2 w-32 h-32 object-cover border rounded shadow"
+              />
+            )}
+          </div>
+
           <button
             type="submit"
             className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
