@@ -7,7 +7,7 @@ function PublicQR() {
 
   useEffect(() => {
     if (publicId) {
-      setQrUrl(`http://localhost:8080/api/public/qr/${publicId}`);
+      setQrUrl(`http://localhost:8080/api/public/qr/image/${publicId}`);
     }
   }, [publicId]);
 
