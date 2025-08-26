@@ -6,9 +6,24 @@ import CreateQR from './pages/CreateQR';
 import CreateVCard from './pages/CreateVCard';
 import PublicQR from './pages/PublicQR';
 import EditQR from './pages/EditQR';
+import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import ResetPasswordPage from './pages/ResetPasswordPage';
+
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useEffect } from 'react';
+
+function Home() {
+  return (
+    <div style={{ padding: 24 }}>
+      <h2>QR App</h2>
+      <p>Hoş geldin!</p>
+      <p>
+        <a href="/forgot-password">Şifremi Unuttum</a> · <a href="/reset-password">Reset Password</a>
+      </p>
+    </div>
+  );
+}
 
 
 function App() {
@@ -21,6 +36,9 @@ function App() {
      <>    
     <Router>
       <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+        <Route path="/reset-password" element={<ResetPasswordPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={token ? <Dashboard /> : <Navigate to="/login" />} />

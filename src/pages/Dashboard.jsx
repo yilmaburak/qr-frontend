@@ -41,7 +41,7 @@ function Dashboard() {
   };
 
   const handleCopyLink = (id) => {
-    const publicUrl = `http://localhost:5173/public/qr/image/${id}`;
+    const publicUrl = `http://localhost:5173/public/qr/${id}`;
     navigator.clipboard.writeText(publicUrl).then(() => {
       alert('Public link copied to clipboard!');
     });
