@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from '../services/api';
+// import axios from '../services/api';
 import { useNavigate, useParams } from 'react-router-dom';
 import DashboardLayout from '../components/DashboardLayout';
 
@@ -13,23 +13,23 @@ function EditQR() {
   const navigate = useNavigate();
 
   const fetchQR = async () => {
-    try {
-      const res = await axios.get(`/qrcodes`);
-      const foundQR = res.data.find((qr) => qr.id === parseInt(id));
-      if (foundQR) {
-        setQRData({
-          title: foundQR.title,
-          description: foundQR.description,
-          content: foundQR.content,
-        });
-      } else {
-        alert('QR Code not found');
-        navigate('/dashboard');
-      }
-    } catch (err) {
-      console.error(err);
-      alert('Failed to load QR code');
-    }
+    // try {
+    //   const res = await axios.get(`/qrcodes`);
+    //   const foundQR = res.data.find((qr) => qr.id === parseInt(id));
+    //   if (foundQR) {
+    //     setQRData({
+    //       title: foundQR.title,
+    //       description: foundQR.description,
+    //       content: foundQR.content,
+    //     });
+    //   } else {
+    //     alert('QR Code not found');
+    //     navigate('/dashboard');
+    //   }
+    // } catch (err) {
+    //   console.error(err);
+    //   alert('Failed to load QR code');
+    // }
   };
 
   const handleSubmit = async (e) => {

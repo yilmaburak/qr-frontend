@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import axios from '../services/api';
+// import axios from '../services/api';
 import DashboardLayout from '../components/DashboardLayout';
 import { useNavigate } from 'react-router-dom';
 
@@ -12,20 +12,20 @@ function Dashboard() {
   const navigate = useNavigate();
 
   const fetchQRCodes = async () => {
-    try {
-      const res = await axios.get('/qrcodes', {
-        params: {
-          page,
-          size,
-          filter,
-        },
-      });
-      setQRCodes(res.data.content);
-      setTotalPages(res.data.totalPages);
-    } catch (err) {
-      console.error(err);
-      alert('Failed to load QR codes');
-    }
+    // try {
+    //   const res = await axios.get('/qrcodes', {
+    //     params: {
+    //       page,
+    //       size,
+    //       filter,
+    //     },
+    //   });
+    //   setQRCodes(res.data.content);
+    //   setTotalPages(res.data.totalPages);
+    // } catch (err) {
+    //   console.error(err);
+    //   alert('Failed to load QR codes');
+    // }
   };
 
   const handleDelete = async (id) => {

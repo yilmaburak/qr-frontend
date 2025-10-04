@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import axios from '../services/api';
+// import axios from '../services/api';
 import DashboardLayout from '../components/DashboardLayout';
 import { useNavigate } from 'react-router-dom';
 import QRCodeStyling from 'qr-code-styling';
@@ -94,25 +94,25 @@ function CreateQR() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await axios.post('/qrcodes', {
-      content,
-      title,
-      description,
-      logoBase64,
-      backgroundImageBase64, // ✅ yeni eklendi
-      foregroundColor,
-      backgroundColor,
-      style, //stil backend'e gönderiliyor
-      });
-      toast.success('QR Code başarıyla oluşturuldu!');
-      setTimeout(() => {
-        navigate('/dashboard');
-      }, 100);
-    } catch (err) {
-      console.error(err);
-      toast.error('QR Code oluşturulamadı!');
-    }
+    // try {
+    //   await axios.post('/qrcodes', {
+    //   content,
+    //   title,
+    //   description,
+    //   logoBase64,
+    //   backgroundImageBase64, // ✅ yeni eklendi
+    //   foregroundColor,
+    //   backgroundColor,
+    //   style, //stil backend'e gönderiliyor
+    //   });
+    //   toast.success('QR Code başarıyla oluşturuldu!');
+    //   setTimeout(() => {
+    //     navigate('/dashboard');
+    //   }, 100);
+    // } catch (err) {
+    //   console.error(err);
+    //   toast.error('QR Code oluşturulamadı!');
+    // }
   };
 
   return (

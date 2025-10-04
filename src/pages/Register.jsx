@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import axios from '../services/api';
+// import axios from '../services/api';
 import { useNavigate } from 'react-router-dom';
 
 function Register() {
@@ -9,13 +9,13 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await axios.post('/auth/register', { username, password });
-      alert('Registered successfully! Please login.');
-      navigate('/login');
-    } catch (err) {
-      alert('Registration failed');
-    }
+    // try {
+    //   await axios.post('/auth/register', { username, password });
+    //   alert('Registered successfully! Please login.');
+    //   navigate('/login');
+    // } catch (err) {
+    //   alert('Registration failed');
+    // }
   };
 
   return (

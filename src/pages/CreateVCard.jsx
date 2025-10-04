@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import axios from '../services/api';
+// import axios from '../services/api';
 import { useNavigate } from 'react-router-dom';
 import DashboardLayout from '../components/DashboardLayout';
 
@@ -28,26 +28,26 @@ function CreateVCard() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await axios.post('/api/vcards', {
-        firstName,
-        lastName,
-        email,
-        phone,
-        company,
-        title,
-        website,
-        address,
-        foregroundColor,
-        backgroundColor,
-        logoBase64,
-      });
-      alert('vCard QR created');
-      navigate('/dashboard');
-    } catch (err) {
-      console.error(err);
-      alert('Failed to create vCard QR');
-    }
+    // try {
+    //   await axios.post('/api/vcards', {
+    //     firstName,
+    //     lastName,
+    //     email,
+    //     phone,
+    //     company,
+    //     title,
+    //     website,
+    //     address,
+    //     foregroundColor,
+    //     backgroundColor,
+    //     logoBase64,
+    //   });
+    //   alert('vCard QR created');
+    //   navigate('/dashboard');
+    // } catch (err) {
+    //   console.error(err);
+    //   alert('Failed to create vCard QR');
+    // }
   };
 
   return (
