@@ -7,9 +7,9 @@ import { useNavigate } from 'react-router-dom';
 import { TiWarningOutline } from "react-icons/ti";
 import Input from '../../ui/Input';
 import InputPassword from '../../ui/InputPassword';
+import Button from '../../ui/Button';
 
 const Login = () => {
-    const [showPassword, setShowPassword] = React.useState(false);
     const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [error, setError] = React.useState<string | null>(null);
@@ -19,8 +19,15 @@ const Login = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        const trimmedUsername = username.trim();
+        const trimmedPassword = password.trim();
+        if (!trimmedUsername || !trimmedPassword) {
+            setError('Username and password are required.');
+            errRef.current?.focus();
+            return;
+        }
         try {
-            const res = await login({ username, password });
+            const res = await login({ username: trimmedUsername, password: trimmedPassword });
             console.log('res: ', res);
             toast.success('Login successful! Redirecting...');
             setAuth({
@@ -43,7 +50,6 @@ const Login = () => {
             setError(null);
             setUsername('');
             setPassword('');
-            setShowPassword(false);
         };
     }, [auth])
 
@@ -54,8 +60,8 @@ const Login = () => {
                     <h2 className="text-2xl font-bold mb-8 text-center">Login to Your Account</h2>
                     <form onSubmit={handleSubmit} className='flex flex-col gap-4 px-0 sm:px-8 sm:mt-8'>
                         {error && (
-                            <div ref={errRef} className="text-red-700 flex gap-1">
-                                <TiWarningOutline className='mt-[3px]' size={20} /> <p>{error}</p>
+                            <div ref={errRef} className="text-red-700 flex text-sm gap-1">
+                                <TiWarningOutline size={20} /> <p>{error}</p>
                             </div>
                         )}
                         <Input
@@ -75,12 +81,9 @@ const Login = () => {
                             required
                             showAsterisk={false}
                         />
-                        <button
-                            type="submit"
-                            className="mt-4 bg-[#E5E5E5] text-black p-2 rounded hover:bg-[#c9c9c9] transition-colors duration-200"
-                        >
+                        <Button type="submit">
                             Login
-                        </button>
+                        </Button>
                         <Link to="/forgot-password" className="text-sm text-blue-400 hover:underline mt-2 mx-auto">
                             Forgot Password?
                         </Link>

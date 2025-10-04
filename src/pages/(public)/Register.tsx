@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { register } from '../../services/auth';
 import useAuth from '../../hooks/useAuth';
+import { validatePassword } from '../../utils/helpers';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { TiWarningOutline } from "react-icons/ti";
@@ -21,13 +22,34 @@ const Register = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        const trimmedUsername = username.trim();
+        const trimmedPassword = password.trim();
+        const trimmedEmail = email.trim();
+        
+        if (!trimmedUsername || !trimmedPassword || !trimmedEmail) {
+            setError('Email, username, and password are required.');
+            errRef.current?.focus();
+            return;
+        }
+
+        const passwordValidation = validatePassword(trimmedPassword);
+        if (!passwordValidation.isValid) {
+            setError(passwordValidation.errors[0]);
+            errRef.current?.focus();
+            return;
+        }
+
         if (password !== passwordConfirm) {
             setError("Passwords do not match");
             errRef.current?.focus();
             return;
         }
         try {
-            const res = await register({ username, password, email });
+            const res = await register({
+                username: trimmedUsername,
+                password: trimmedPassword,
+                email: trimmedEmail
+            });
             toast.success('Register successful! Redirecting...');
             navigate('/login', { replace: true });
             setError(null);
@@ -57,8 +79,8 @@ const Register = () => {
                     <h2 className="text-2xl font-bold mb-8 text-center">Register</h2>
                     <form onSubmit={handleSubmit} className='flex flex-col gap-4 px-0 sm:px-8 sm:mt-8'>
                         {error && (
-                            <div ref={errRef} className="text-red-700 flex gap-1">
-                                <TiWarningOutline className='mt-[3px]' size={20} /> <p>{error}</p>
+                            <div ref={errRef} className="text-red-700 flex text-sm gap-1">
+                                <TiWarningOutline size={20} /> <p>{error}</p>
                             </div>
                         )}
                         <Input

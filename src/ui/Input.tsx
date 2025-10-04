@@ -99,7 +99,7 @@ const Input: React.FC<InputProps> = ({
                 <div
                     className={`
                         ${iconClassName ?? ''} ${iconPositionClass}
-                        absolute top-1/2 z-50 flex -translate-y-1/2 items-center justify-center 
+                        absolute top-1/2 z-1 flex -translate-y-1/2 items-center justify-center 
                         rounded bg-black text-slate-400 w-fit
                     `}
                     {...iconProps}
