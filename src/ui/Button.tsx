@@ -25,7 +25,7 @@ const Button: React.FC<ButtonProps> = ({
     disabled = false,
     ...rest
 }) => {
-    const baseStyles = "mt-4 p-2 rounded transition-colors duration-200";
+    const baseStyles = "p-2 rounded transition-colors duration-200";
     const variantStyles = VARIANT_STYLES[variant];
 
     return (

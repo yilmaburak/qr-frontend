@@ -122,8 +122,6 @@ const Header = () => {
         </div>
     );
 
-
-
     return (
         <header className="w-full h-16 bg-[#0A0A0A] sticky top-0 z-10 flex items-center text-black dark:text-white">
             <div className="container mx-auto flex justify-between items-center px-4">

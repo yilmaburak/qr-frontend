@@ -1,20 +1,5 @@
-// =========================
-// src/api/auth.js
-
 import api from "../utils/axiosInstance";
 import { LoginProps, RegisterProps } from "../Models/Auth";
-
-// =========================
-export async function forgotPassword(email: any) {
-  const res = await fetch(`/api/auth/forgot-password`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email })
-  });
-  const text = await res.text();
-  if (!res.ok) throw new Error(text || 'İstek başarısız');
-  return text;
-}
 
 export async function resetPassword(token: any, newPassword: any) {
   const res = await fetch(`/api/auth/reset-password`, {
@@ -33,11 +18,16 @@ export const login = async ({ username, password }: LoginProps) => {
 }
 
 export const logout = async () => {
-  const res = await api.post('/auth/logout',{});
+  const res = await api.post('/auth/logout', {});
   return res.data;
 }
 
 export const register = async ({ username, password, email }: RegisterProps) => {
   const res = await api.post('/auth/register', { username, password, email });
+  return res.data;
+}
+
+export async function forgotPassword(email: any) {
+  const res = await api.post('/auth/forgot-password', { email });
   return res.data;
 }

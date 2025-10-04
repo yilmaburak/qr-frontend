@@ -2,9 +2,9 @@ import React from 'react'
 
 const Home = () => {
     return (
-        <div className="flex-grow">
+        <main className="flex-grow">
             Home
-        </div>
+        </main>
     )
 }
 

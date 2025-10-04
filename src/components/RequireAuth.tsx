@@ -11,7 +11,6 @@ const RequireAuth = ({ allowedRoles, fallbackUrl }: { allowedRoles: Role[], fall
     const hasRole = auth?.roles?.some((role: Role) => allowedRoles.includes(role));
 
     if (hasRole) {
-        console.log('hasRole: ', hasRole);
         return <Outlet />;
     }
 

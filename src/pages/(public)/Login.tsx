@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { login } from '../../services/auth';
 import useAuth from '../../hooks/useAuth';
@@ -10,9 +10,9 @@ import InputPassword from '../../ui/InputPassword';
 import Button from '../../ui/Button';
 
 const Login = () => {
-    const [username, setUsername] = React.useState('');
-    const [password, setPassword] = React.useState('');
-    const [error, setError] = React.useState<string | null>(null);
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState<string | null>(null);
     const { auth, setAuth }: any = useAuth()
     const navigate = useNavigate();
     const errRef = useRef<HTMLDivElement>(null);
@@ -28,7 +28,6 @@ const Login = () => {
         }
         try {
             const res = await login({ username: trimmedUsername, password: trimmedPassword });
-            console.log('res: ', res);
             toast.success('Login successful! Redirecting...');
             setAuth({
                 user: res.user || username,
@@ -54,7 +53,7 @@ const Login = () => {
     }, [auth])
 
     return (
-        <section className='flex-grow flex items-center justify-center'>
+        <main className='flex-grow flex items-center justify-center'>
             <div className="rounded-lg w-full sm:max-w-4xl max-w-full grid sm:grid-cols-2 sm:h-[500px]">
                 <div className="bg-[#0A0A0A] p-6 mx-2 sm:mx-0 shadow-md rounded-l-lg flex flex-col">
                     <h2 className="text-2xl font-bold mb-8 text-center">Login to Your Account</h2>
@@ -103,7 +102,7 @@ const Login = () => {
                     />
                 </div>
             </div>
-        </section>
+        </main>
     )
 }
 

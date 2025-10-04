@@ -1,12 +1,9 @@
-// =========================
-// src/pages/ForgotPasswordPage.jsx
-// =========================
 import { useState } from 'react';
 import { forgotPassword } from '../services/auth';
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState(null); // {type:'success'|'error', msg:string}
+  const [status, setStatus] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (e) => {

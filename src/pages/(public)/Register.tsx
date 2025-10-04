@@ -73,7 +73,7 @@ const Register = () => {
     }, [auth])
 
     return (
-        <section className='flex-grow flex items-center justify-center'>
+        <main className='flex-grow flex items-center justify-center'>
             <div className="rounded-lg w-full sm:max-w-lg max-w-full sm:min-h-[500px]">
                 <div className="bg-[#0A0A0A] p-6 mx-2 sm:mx-0 shadow-md rounded-xl flex flex-col">
                     <h2 className="text-2xl font-bold mb-8 text-center">Register</h2>
@@ -120,7 +120,7 @@ const Register = () => {
                     </form>
                 </div>
             </div>
-        </section>
+        </main>
     )
 }
 

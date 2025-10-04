@@ -52,7 +52,7 @@ function Dashboard() {
   }, [page, size, filter]);
 
   return (
-    <DashboardLayout>
+    <>
       <h1 className="text-2xl font-bold mb-4">My QR Codes</h1>
 
       <div className="mb-4 flex flex-wrap items-center gap-4">
@@ -142,7 +142,7 @@ function Dashboard() {
           Next
         </button>
       </div>
-    </DashboardLayout>
+    </>
   );
 }
 
