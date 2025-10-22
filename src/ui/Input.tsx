@@ -27,6 +27,7 @@ export interface InputProps {
     iconProps?: React.HTMLAttributes<HTMLDivElement>;
     iconClassName?: string;
     showAsterisk?: boolean;
+    wrapperClass?: string;
     [key: string]: any; // Support for additional props (e.g., data-*, aria-*)
 }
 
@@ -44,6 +45,7 @@ const Input: React.FC<InputProps> = ({
     placeholder,
     required = false,
     showAsterisk = true,
+    wrapperClass,
     ...props
 }) => {
     const generatedId = useId();
@@ -75,7 +77,7 @@ const Input: React.FC<InputProps> = ({
     const iconPositionClass = iconOnRight ? 'right-2' : 'left-2';
 
     return (
-        <div className="relative">
+        <div className={`relative w-full ${wrapperClass ?? ''}`}>
             <input
                 {...props}
                 id={inputId}

@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 // import axios from '../services/api';
-import DashboardLayout from '../components/DashboardLayout';
 import { useNavigate } from 'react-router-dom';
 import QRCodeStyling from 'qr-code-styling';
 import { HexColorPicker } from 'react-colorful';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { generateQRCode } from '../services/qr';
 
 function CreateQR() {
   const [title, setTitle] = useState('');
@@ -94,29 +94,32 @@ function CreateQR() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // try {
-    //   await axios.post('/qrcodes', {
-    //   content,
-    //   title,
-    //   description,
-    //   logoBase64,
-    //   backgroundImageBase64, // ✅ yeni eklendi
-    //   foregroundColor,
-    //   backgroundColor,
-    //   style, //stil backend'e gönderiliyor
-    //   });
-    //   toast.success('QR Code başarıyla oluşturuldu!');
-    //   setTimeout(() => {
-    //     navigate('/dashboard');
-    //   }, 100);
-    // } catch (err) {
-    //   console.error(err);
-    //   toast.error('QR Code oluşturulamadı!');
-    // }
+
+    const data = {
+      content,
+      title,
+      description,
+      logoBase64,
+      backgroundImageBase64, // ✅ yeni eklendi
+      foregroundColor,
+      backgroundColor,
+      style, //stil backend'e gönderiliyor
+      }
+
+    try {
+      const res = await generateQRCode(data)
+      toast.success('QR Code başarıyla oluşturuldu!');
+      setTimeout(() => {
+        navigate('/dashboard');
+      }, 100);
+    } catch (err) {
+      console.error(err);
+      toast.error('QR Code oluşturulamadı!');
+    }
   };
 
   return (
-    <DashboardLayout>
+    <>
       <h1 className="text-2xl font-bold mb-4">Create QR Code</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -226,7 +229,7 @@ function CreateQR() {
           />
         </div>
       </div>
-    </DashboardLayout>
+    </>
   );
 }
 

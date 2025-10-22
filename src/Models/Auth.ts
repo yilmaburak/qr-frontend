@@ -1,7 +1,8 @@
 export interface AuthContextType {
     user: any;
-    roles: Role[];
-    accessToken: string;
+    roles: Role[] | [];
+    accessToken: string | null;
+    isLoading?: boolean;
 }
 
 export enum Role {

@@ -1,23 +1,34 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../../components/Sidebar'
 import TopBar from '../../components/Topbar'
+import { useDispatch, useSelector } from 'react-redux'
 
 const DashboardLayout = () => {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+    const isSidebarOpen = useSelector((state: any) => state.general.isSidebarOpen)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        if (window.innerWidth > 768) {
+            dispatch({ type: 'general/toggleSidebar' })
+        }
+    }, [dispatch])
 
     return (
-        <div className='min-h-dvh'>
-            <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
-            <TopBar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
+        <div className="min-h-dvh flex flex-col bg-[#0A0A0A] text-white">
+            <Sidebar />
+            <TopBar />
             <main
-                className={`${isSidebarOpen ? 'ml-64' : 'ml-16'
-                    } p-4 transition-all duration-300`}
+                className={`
+                    p-4 transition-all duration-300 flex-grow ml-16
+                    ${isSidebarOpen ? 'md:ml-64' : ''}
+                `}
             >
                 <Outlet />
             </main>
         </div>
     )
 }
+
 
 export default DashboardLayout

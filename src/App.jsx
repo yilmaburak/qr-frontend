@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/(public)/Login';
 import Register from './pages/(public)/Register';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/(dashboard)/Dashboard';
 import CreateQR from './pages/CreateQR';
 import CreateVCard from './pages/CreateVCard';
 import PublicQR from './pages/PublicQR';
@@ -15,6 +15,7 @@ import Home from './pages/(public)/Home';
 import DashboardLayout from './pages/(dashboard)/DashboardLayout';
 import RequireAuth from './components/RequireAuth';
 import { Role } from './Models/Auth';
+import QrForm from './pages/(dashboard)/QrForm';
 
 function App() {
   return (
@@ -27,12 +28,12 @@ function App() {
           <Route path="forgot-password" element={<ForgotPasswordPage />} />
           <Route path="reset-password" element={<ResetPasswordPage />} />
         </Route>
-        <Route element={<RequireAuth allowedRoles={[Role.Admin, Role.User, Role.Vcard]} />}>
+        <Route >
           <Route path="/dashboard" element={<DashboardLayout />} >
             <Route index element={<Dashboard />} />
             <Route path="create-vcard" element={<CreateVCard />} />
-            <Route path="create" element={<CreateQR />} />
-            <Route path="edit/:id" element={<EditQR />} />
+            <Route path="create" element={<QrForm />} />
+            <Route path="edit/:id" element={<QrForm />} />
             <Route path="*" element={<Navigate to="/dashboard" />} />
           </Route>
         </Route>

@@ -6,6 +6,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: ButtonVariant;
     className?: string;
     children: React.ReactNode;
+    size?: "small" | "medium" | "large";
 }
 
 const VARIANT_STYLES: Record<ButtonVariant, string> = {
@@ -23,6 +24,7 @@ const Button: React.FC<ButtonProps> = ({
     className = "",
     variant = "secondary",
     disabled = false,
+    size = "medium",
     ...rest
 }) => {
     const baseStyles = "p-2 rounded transition-colors duration-200";
@@ -33,8 +35,8 @@ const Button: React.FC<ButtonProps> = ({
             type={type}
             onClick={onClick}
             disabled={disabled}
-            className={`${baseStyles} ${variantStyles} ${className} ${disabled ? "opacity-50 cursor-not-allowed" : ""
-                }`}
+            className={`${baseStyles} ${variantStyles} ${className} ${disabled ? "opacity-50 cursor-not-allowed" : ""} 
+                ${size === "small" ? "text-sm" : size === "large" ? "text-lg" : "text-md"}`}
             {...rest}
         >
             {children}
