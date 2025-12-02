@@ -1,24 +1,37 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
-  FaThLarge, FaClipboardList, FaCommentAlt, FaCalendarAlt,
-  FaBookOpen, FaBox, FaStar, FaSignOutAlt
+  FaQrcode, FaPlus, FaIdCard, FaUtensils, FaSignOutAlt
 } from 'react-icons/fa';
 
 const Sidebar = () => {
   const location = useLocation();
 
-  const menuItems = [
-    { path: '/dashboard', icon: <FaThLarge />, label: 'Dashboard' },
-    { path: '/dashboard/orders', icon: <FaClipboardList />, label: 'Orders' },
-    { path: '/dashboard/messages', icon: <FaCommentAlt />, label: 'Messages', badge: 3 },
-    { path: '/dashboard/calendar', icon: <FaCalendarAlt />, label: 'Calendar' },
-    { path: '/dashboard/menu', icon: <FaBookOpen />, label: 'Menu' },
-    { path: '/dashboard/inventory', icon: <FaBox />, label: 'Inventory' },
-    { path: '/dashboard/reviews', icon: <FaStar />, label: 'Reviews' },
+  const menuGroups = [
+    {
+      title: 'QR Modülü',
+      items: [
+        { path: '/dashboard', icon: <FaQrcode />, label: 'QR Kodlarım', exact: true },
+        { path: '/dashboard/create', icon: <FaPlus />, label: 'QR Oluştur' },
+        { path: '/dashboard/create-vcard', icon: <FaIdCard />, label: 'vCard Oluştur' },
+      ]
+    },
+    {
+      title: 'Restoran Modülü',
+      items: [
+        { path: '/dashboard/menu', icon: <FaUtensils />, label: 'Menülerim' },
+        // 'Men' from user request is ambiguous, assuming it might be related to orders or just a typo. 
+        // Leaving it out for now to strictly follow the clear parts of the request.
+      ]
+    }
   ];
 
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path, exact = false) => {
+    if (exact) {
+      return location.pathname === path;
+    }
+    return location.pathname.startsWith(path);
+  };
 
   return (
     <div className="w-64 bg-white h-screen fixed left-0 top-0 border-r flex flex-col">
@@ -29,26 +42,28 @@ const Sidebar = () => {
         <h1 className="text-2xl font-bold text-gray-800">Reztro</h1>
       </div>
 
-      <nav className="flex-1 px-4 py-4 space-y-2">
-        {menuItems.map((item) => (
-          <Link
-            key={item.path}
-            to={item.path}
-            className={`flex items-center justify-between px-4 py-3 rounded-xl transition-colors ${isActive(item.path)
-                ? 'bg-orange-50 text-orange-500 font-semibold'
-                : 'text-gray-500 hover:bg-gray-50'
-              }`}
-          >
-            <div className="flex items-center gap-3">
-              {item.icon}
-              <span>{item.label}</span>
+      <nav className="flex-1 px-4 py-4 overflow-y-auto">
+        {menuGroups.map((group, groupIndex) => (
+          <div key={groupIndex} className="mb-6">
+            <h3 className="px-4 mb-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+              {group.title}
+            </h3>
+            <div className="space-y-1">
+              {group.items.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-colors ${isActive(item.path, item.exact)
+                      ? 'bg-orange-50 text-orange-500 font-semibold'
+                      : 'text-gray-500 hover:bg-gray-50'
+                    }`}
+                >
+                  {item.icon}
+                  <span>{item.label}</span>
+                </Link>
+              ))}
             </div>
-            {item.badge && (
-              <span className="bg-orange-500 text-white text-xs px-2 py-0.5 rounded-full">
-                {item.badge}
-              </span>
-            )}
-          </Link>
+          </div>
         ))}
       </nav>
 
