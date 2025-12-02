@@ -4,13 +4,14 @@ import { useNavigate } from 'react-router-dom';
 
 function Register() {
   const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/auth/register', { username, password });
+      await axios.post('/auth/register', { username, email, password });
       alert('Registered successfully! Please login.');
       navigate('/login');
     } catch (err) {
@@ -28,6 +29,13 @@ function Register() {
           className="w-full mb-3 p-2 border rounded"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          className="w-full mb-3 p-2 border rounded"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"

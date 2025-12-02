@@ -8,6 +8,7 @@ import PublicQR from './pages/PublicQR';
 import EditQR from './pages/EditQR';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
+import MenuManagement from './pages/MenuManagement';
 
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -33,24 +34,25 @@ function App() {
   }, [])
 
   return (
-     <>    
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-        <Route path="/reset-password" element={<ResetPasswordPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={token ? <Dashboard /> : <Navigate to="/login" />} />
-        <Route path="/dashboard/create" element={token ? <CreateQR /> : <Navigate to="/login" />} />
-        <Route path="/dashboard/create-vcard" element={token ? <CreateVCard /> : <Navigate to="/login" />} />
-        <Route path="/public/qr/:publicId" element={<PublicQR />} />
-        <Route path="*" element={<Navigate to={token ? "/dashboard" : "/login"} />} />
-        <Route path="/dashboard/edit/:id" element={<EditQR />} />
-      </Routes>
-      <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} />
-    </Router>   
-     </>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+          <Route path="/reset-password" element={<ResetPasswordPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={token ? <Dashboard /> : <Navigate to="/login" />} />
+          <Route path="/dashboard/create" element={token ? <CreateQR /> : <Navigate to="/login" />} />
+          <Route path="/dashboard/create-vcard" element={token ? <CreateVCard /> : <Navigate to="/login" />} />
+          <Route path="/dashboard/menu" element={token ? <MenuManagement /> : <Navigate to="/login" />} />
+          <Route path="/public/qr/:publicId" element={<PublicQR />} />
+          <Route path="*" element={<Navigate to={token ? "/dashboard" : "/login"} />} />
+          <Route path="/dashboard/edit/:id" element={<EditQR />} />
+        </Routes>
+        <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} />
+      </Router>
+    </>
   );
 }
 

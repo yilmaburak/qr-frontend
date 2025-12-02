@@ -56,6 +56,12 @@ function Dashboard() {
       <h1 className="text-2xl font-bold mb-4">My QR Codes</h1>
 
       <div className="mb-4 flex flex-wrap items-center gap-4">
+        <button
+          onClick={() => navigate('/dashboard/menu')}
+          className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
+        >
+          Manage Menu
+        </button>
         <input
           type="text"
           placeholder="Filter by title or description"
@@ -85,10 +91,10 @@ function Dashboard() {
               <h2 className="font-bold text-lg mb-2">{qr.title}</h2>
               <p className="text-sm mb-2">{qr.description}</p>
               <img
-  src={`http://localhost:8080/api/public/qr/image/${qr.publicId}`}
-  alt={qr.title}
-  className="w-32 h-32"
-/>
+                src={`http://localhost:8080/api/public/qr/image/${qr.publicId}`}
+                alt={qr.title}
+                className="w-32 h-32"
+              />
               <div className="flex flex-wrap space-x-2 mt-2">
                 <button
                   onClick={() => navigate(`/dashboard/edit/${qr.id}`)}
