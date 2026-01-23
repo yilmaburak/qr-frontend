@@ -1,0 +1,122 @@
+{
+    "hero": {
+        "title": "Create Beautiful QR Codes in Seconds",
+        "subtitle": "Professional QR codes with custom designs, analytics, and more",
+        "cta_primary": "Get Started Free",
+        "cta_secondary": "View Pricing",
+        "trusted_by": "Trusted by 10,000+ businesses worldwide",
+        "login": "Login",
+        "get_started": "Get Started",
+        "badge": "New Feature",
+        "title_part1": "The Future of",
+        "title_highlight": "QR Codes",
+        "title_part2": "is Here",
+        "generating": "Generating...",
+        "download_qr": "Download QR",
+        "processing": "Processing..."
+    },
+    "features": {
+        "title": "Everything You Need",
+        "subtitle": "Powerful features for modern businesses",
+        "custom_design": {
+            "title": "Custom Designs",
+            "description": "Add logos, colors, and frames to match your brand",
+            "promo_title": "Need more power?",
+            "subtitle": "Sign up for Dynamic QRs, Analytics, and VCards.",
+            "dynamic_title": "Dynamic QR Codes",
+            "dynamic_desc": "Update content anytime without reprinting",
+            "analytics_title": "Advanced Analytics",
+            "analytics_desc": "Track scans, locations, and user behavior",
+            "customization_title": "Full Customization",
+            "customization_desc": "Logos, colors, frames, and GIF backgrounds",
+            "security_title": "Enterprise Security",
+            "security_desc": "Password protection and encryption"
+        },
+        "pricing": {
+            "title": "Simple, Transparent Pricing",
+            "subtitle": "Choose the perfect plan for your needs",
+            "free": "Free",
+            "pro": "Pro",
+            "business": "Business",
+            "per_month": "/month",
+            "get_started": "Get Started"
+        },
+        "cta": {
+            "title": "Ready to Get Started?",
+            "subtitle": "Join thousands of businesses using QR codes",
+            "button": "Create Your First QR Code"
+        },
+        "footer": {
+            "product": "Product",
+            "features": "Features",
+            "pricing": "Pricing",
+            "docs": "Documentation",
+            "company": "Company",
+            "about": "About Us",
+            "contact": "Contact",
+            "blog": "Blog",
+            "legal": "Legal",
+            "terms": "Terms of Service",
+            "privacy": "Privacy Policy",
+            "copyright": "All rights reserved"
+        },
+        "features_list": {
+            "dynamic": {
+                "title": "Dynamic QRs",
+                "description": "Edit destination tracking anytime."
+            },
+            "analytics": {
+                "title": "Analytics",
+                "description": "Track real-time scans and locations."
+            },
+            "design": {
+                "title": "Custom Design",
+                "description": "Logos, colors, dots, and eyes."
+            },
+            "vcard": {
+                "title": "VCard & PDF",
+                "description": "Share contacts and documents easily."
+            }
+        }
+    },
+    "modules": {
+        "url": "URL",
+        "vcard": "vCard",
+        "file": "File",
+        "linkpage": "Link Page",
+        "google": "Google Form",
+        "menu": "Menu",
+        "app": "App Stores",
+        "landing": "Landing Page",
+        "smart": "Smart URL",
+        "gs1": "GS1 Digital",
+        "mp3": "MP3",
+        "video": "Video",
+        "wifi": "Wifi",
+        "text": "More"
+    },
+    "generator": {
+        "target_url": "Target URL",
+        "static_note": "For static QR codes, please host your content and paste the link here.",
+        "ssid": "Network Name (SSID)",
+        "password": "Password",
+        "encryption": "Encryption",
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "phone": "Phone",
+        "email": "Email",
+        "org": "Organization",
+        "your_text": "Your Text",
+        "text_placeholder": "Type anything here...",
+        "style": "Style",
+        "color": "Color",
+        "background": "Background",
+        "empty_center": "Empty Center",
+        "remove": "Remove",
+        "upload_gif": "Upload GIF",
+        "upload_image": "Upload Image",
+        "upload_logo": "Upload Logo",
+        "bg_visibility": "Background Visibility",
+        "logo": "Logo"
+    }
+}

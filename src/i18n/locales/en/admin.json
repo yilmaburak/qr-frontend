@@ -1,0 +1,211 @@
+{
+    "dashboard": {
+        "title": "Admin Dashboard",
+        "total_users": "Total Users",
+        "active_users_count": "{{count}} active",
+        "restaurants": "Restaurants",
+        "manage_restaurants": "Manage restaurants",
+        "regular_users": "Regular Users",
+        "super_admins": "Super Admins",
+        "user_status": "User Status",
+        "system_settings": "System Settings",
+        "global_config": "Global Config",
+        "subscriptions_enabled": "Subscriptions Enabled",
+        "active": "Active",
+        "inactive": "Inactive",
+        "suspended": "Suspended"
+    },
+    "sidebar": {
+        "dashboard": "Dashboard",
+        "users": "User Management",
+        "restaurants": "Restaurants",
+        "audit_logs": "Audit Logs",
+        "system_health": "System Health",
+        "settings": "System Settings"
+    },
+    "users": {
+        "title": "User Management",
+        "add_user_btn": "+ Add User",
+        "alerts": {
+            "fetch_error": "Failed to load users. Please check your admin access.",
+            "create_success": "User created successfully",
+            "create_error_default": "Failed to create user. Ensure username/email are unique.",
+            "activate_success": "User activated successfully",
+            "activate_error": "Failed to activate user",
+            "suspend_confirm": "Are you sure you want to suspend this user?",
+            "suspend_success": "User suspended successfully",
+            "suspend_error": "Failed to suspend user",
+            "delete_confirm": "Are you sure you want to delete this user? This action cannot be undone.",
+            "delete_success": "User deleted successfully",
+            "delete_error": "Failed to delete user",
+            "prompt_role": "Enter new role (USER, RESTAURANT_OWNER, SUPER_ADMIN):",
+            "invalid_role": "Invalid role",
+            "role_update_success": "Role updated successfully",
+            "role_update_error": "Failed to update role"
+        },
+        "create_modal": {
+            "title": "Create New User",
+            "username": "Username",
+            "email": "Email",
+            "password": "Password",
+            "role": "Role",
+            "cancel": "Cancel",
+            "create_btn": "Create User"
+        },
+        "tooltips": {
+            "edit": "Edit User",
+            "activate": "Activate",
+            "suspend": "Suspend",
+            "change_role": "Change Role",
+            "delete": "Delete"
+        },
+        "add_user": "Add User",
+        "edit_user": "Edit User",
+        "delete_confirm": "Are you sure you want to delete this user?",
+        "user_deleted": "User deleted successfully",
+        "delete_error": "Failed to delete user",
+        "save_success": "User saved successfully",
+        "save_error": "Failed to save user",
+        "table": {
+            "id": "ID",
+            "username": "Username",
+            "name": "Name",
+            "email": "Email",
+            "role": "Role",
+            "status": "Status",
+            "actions": "Actions"
+        },
+        "roles": {
+            "admin": "Admin",
+            "user": "User",
+            "restaurant_manager": "Restaurant Manager"
+        },
+        "edit": {
+            "title": "Edit User: {{username}}",
+            "id_label": "User ID: {{id}}",
+            "back_btn": "Back to Users",
+            "fetch_error": "Failed to load user details",
+            "update_success": "User updated successfully",
+            "update_error": "Failed to update user",
+            "user_not_found": "User not found",
+            "sections": {
+                "subscription": "Subscription Details"
+            },
+            "fields": {
+                "subscription_tier": "Subscription Tier",
+                "subscription_status": "Subscription Status"
+            },
+            "tier": {
+                "free": "Free",
+                "pro_monthly": "Pro (Monthly)",
+                "pro_yearly": "Pro (Yearly)"
+            },
+            "status": {
+                "canceled": "Canceled",
+                "expired": "Expired",
+                "past_due": "Past Due"
+            }
+        }
+    },
+    "restaurants": {
+        "title": "Restaurant Management",
+        "fetch_error": "Failed to load restaurants.",
+        "add_restaurant": "Add Restaurant",
+        "edit_restaurant": "Edit Restaurant",
+        "delete_confirm": "Delete this restaurant?",
+        "edit": {
+            "title": "Edit Restaurant: {{name}}",
+            "subtitle": "ID: {{id}} | Owner: {{owner}}",
+            "back_btn": "Back to Restaurants",
+            "fetch_error": "Failed to load restaurant details",
+            "update_success": "Restaurant updated successfully",
+            "update_error": "Failed to update restaurant",
+            "restaurant_not_found": "Restaurant not found",
+            "fields": {
+                "phone": "Phone",
+                "currency": "Currency"
+            },
+            "buttons": {
+                "manage_branches": "Manage Branches",
+                "manage_menu": "Manage Menu"
+            }
+        },
+        "table": {
+            "id": "ID",
+            "name": "Name",
+            "owner": "Owner",
+            "owner_email": "Owner Email",
+            "address": "Address",
+            "location": "Location",
+            "status": "Status",
+            "actions": "Actions"
+        }
+    },
+    "logs": {
+        "title": "Activity Logs",
+        "activity": {
+            "title": "Activity Logs",
+            "table": {
+                "time": "Time",
+                "user_id": "User ID",
+                "action": "Action",
+                "entity": "Entity",
+                "details": "Details",
+                "ip_address": "IP Address"
+            }
+        },
+        "audit": {
+            "title": "Audit Logs",
+            "subtitle": "Track all administrative actions and system events",
+            "filters_btn": "Filters",
+            "export_csv": "Export CSV",
+            "filters": {
+                "username": "Username",
+                "username_placeholder": "Filter by username",
+                "action": "Action",
+                "all_actions": "All Actions",
+                "entity_type": "Entity Type",
+                "all_types": "All Types",
+                "status": "Status",
+                "all_statuses": "All Statuses",
+                "start_date": "Start Date",
+                "end_date": "End Date"
+            },
+            "clear_filters": "Clear All Filters",
+            "loading": "Loading audit logs...",
+            "no_logs": "No audit logs found",
+            "view_details": "View Details",
+            "modal": {
+                "title": "Audit Log Details",
+                "user_agent": "User Agent",
+                "details_json": "Details (JSON)"
+            },
+            "table": {
+                "timestamp": "Timestamp",
+                "user": "User",
+                "action": "Action",
+                "entity": "Entity",
+                "status": "Status",
+                "ip": "IP",
+                "actions": "Actions"
+            },
+            "alerts": {
+                "fetch_error": "Failed to load audit logs: "
+            }
+        },
+        "common": {
+            "loading": "Loading...",
+            "save": "Save",
+            "cancel": "Cancel",
+            "delete": "Delete",
+            "edit": "Edit",
+            "active": "Active",
+            "inactive": "Inactive",
+            "previous": "Previous",
+            "next": "Next",
+            "page_info": "Page {{current}} of {{total}}",
+            "saving": "Saving...",
+            "save_changes": "Save Changes"
+        }
+    }
+}

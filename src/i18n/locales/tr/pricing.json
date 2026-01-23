@@ -1,0 +1,37 @@
+{
+    "title": "Her İhtiyaca Uygun Esnek Fiyatlandırma",
+    "subtitle": "İşiniz için mükemmel modülü seçin.",
+    "monthly": "Aylık",
+    "yearly": "Yıllık",
+    "yearly_discount": "-%20",
+    "forever": "ömür boyu",
+    "mo": "ay",
+    "start_free": "Ücretsiz Başla",
+    "choose_plan": "{{plan}} Seç",
+    "popular": "POPÜLER",
+    "more_features": "+ {{count}} özellik daha",
+    "footer_note": "Fiyatlar USD cinsindendir. Stripe ile güvenli ödeme işlemi.",
+    "features_for": "{{module}} için güçlü özellikler",
+    "modal": {
+        "title": "Aboneliği Onayla",
+        "desc": "{{module}} - {{tier}} aboneliğinizi başlatmak istiyor musunuz?",
+        "cancel": "İptal",
+        "confirm": "Onayla",
+        "processing": "İşleniyor..."
+    },
+    "login_modal": {
+        "title": "Hesap Gerekli",
+        "desc": "ABONE OLMAK İÇİN LÜTFEN GİRİŞ YAPIN",
+        "login_btn": "Giriş Yap / Kayıt Ol",
+        "cancel": "İptal"
+    },
+    "messages": {
+        "success": "🎉 {{module}} aboneliği başarıyla başlatıldı!",
+        "fail": "Abone olunamadı: {{error}}"
+    },
+    "modules": {
+        "QR_GENERATOR": "QR Oluşturucu",
+        "RESTAURANT": "Restoran",
+        "ACCESS_CONTROL": "Erişim Kontrolü"
+    }
+}

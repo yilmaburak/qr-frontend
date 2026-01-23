@@ -1,0 +1,211 @@
+{
+    "dashboard": {
+        "title": "Yönetici Paneli",
+        "total_users": "Toplam Kullanıcı",
+        "active_users_count": "{{count}} aktif",
+        "restaurants": "Restoranlar",
+        "manage_restaurants": "Restoranları yönet",
+        "regular_users": "Standart Kullanıcılar",
+        "super_admins": "Süper Yöneticiler",
+        "user_status": "Kullanıcı Durumu",
+        "system_settings": "Sistem Ayarları",
+        "global_config": "Genel Yapılandırma",
+        "subscriptions_enabled": "Abonelikler Aktif",
+        "active": "Aktif",
+        "inactive": "Pasif",
+        "suspended": "Askıda"
+    },
+    "sidebar": {
+        "dashboard": "Panel",
+        "users": "Kullanıcı Yönetimi",
+        "restaurants": "Restoranlar",
+        "audit_logs": "Denetim Günlükleri",
+        "system_health": "Sistem Sağlığı",
+        "settings": "Sistem Ayarları"
+    },
+    "users": {
+        "title": "Kullanıcı Yönetimi",
+        "add_user_btn": "+ Kullanıcı Ekle",
+        "alerts": {
+            "fetch_error": "Kullanıcılar yüklenemedi. Lütfen yetkinizi kontrol edin.",
+            "create_success": "Kullanıcı başarıyla oluşturuldu",
+            "create_error_default": "Kullanıcı oluşturulamadı. Kullanıcı adı/e-posta benzersiz olmalı.",
+            "activate_success": "Kullanıcı aktif edildi",
+            "activate_error": "Kullanıcı aktif edilemedi",
+            "suspend_confirm": "Bu kullanıcıyı askıya almak istediğinizden emin misiniz?",
+            "suspend_success": "Kullanıcı başarıyla askıya alındı",
+            "suspend_error": "Kullanıcı askıya alınamadı",
+            "delete_confirm": "Bu kullanıcıyı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+            "delete_success": "Kullanıcı başarıyla silindi",
+            "delete_error": "Kullanıcı silinemedi",
+            "prompt_role": "Yeni rolü girin (USER, RESTAURANT_OWNER, SUPER_ADMIN):",
+            "invalid_role": "Geçersiz rol",
+            "role_update_success": "Rol başarıyla güncellendi",
+            "role_update_error": "Rol güncellenemedi"
+        },
+        "create_modal": {
+            "title": "Yeni Kullanıcı Oluştur",
+            "username": "Kullanıcı Adı",
+            "email": "E-posta",
+            "password": "Şifre",
+            "role": "Rol",
+            "cancel": "İptal",
+            "create_btn": "Kullanıcı Oluştur"
+        },
+        "tooltips": {
+            "edit": "Düzenle",
+            "activate": "Aktifleştir",
+            "suspend": "Askıya Al",
+            "change_role": "Rol Değiştir",
+            "delete": "Sil"
+        },
+        "add_user": "Kullanıcı Ekle",
+        "edit_user": "Kullanıcı Düzenle",
+        "delete_confirm": "Bu kullanıcıyı silmek istediğinizden emin misiniz?",
+        "user_deleted": "Kullanıcı başarıyla silindi",
+        "delete_error": "Kullanıcı silinemedi",
+        "save_success": "Kullanıcı başarıyla kaydedildi",
+        "save_error": "Kullanıcı kaydedilemedi",
+        "table": {
+            "id": "ID",
+            "username": "Kullanıcı Adı",
+            "name": "İsim",
+            "email": "E-posta",
+            "role": "Rol",
+            "status": "Durum",
+            "actions": "İşlemler"
+        },
+        "roles": {
+            "admin": "Yönetici",
+            "user": "Kullanıcı",
+            "restaurant_manager": "Restoran Yöneticisi"
+        },
+        "edit": {
+            "title": "Kullanıcı Düzenle: {{username}}",
+            "id_label": "Kullanıcı ID: {{id}}",
+            "back_btn": "Kullanıcılara Dön",
+            "fetch_error": "Kullanıcı detayları yüklenemedi",
+            "update_success": "Kullanıcı başarıyla güncellendi",
+            "update_error": "Kullanıcı güncellenemedi",
+            "user_not_found": "Kullanıcı bulunamadı",
+            "sections": {
+                "subscription": "Abonelik Detayları"
+            },
+            "fields": {
+                "subscription_tier": "Abonelik Paketi",
+                "subscription_status": "Abonelik Durumu"
+            },
+            "tier": {
+                "free": "Ücretsiz",
+                "pro_monthly": "Pro (Aylık)",
+                "pro_yearly": "Pro (Yıllık)"
+            },
+            "status": {
+                "canceled": "İptal Edildi",
+                "expired": "Süresi Doldu",
+                "past_due": "Ödeme Geçikmiş"
+            }
+        }
+    },
+    "restaurants": {
+        "title": "Restoran Yönetimi",
+        "fetch_error": "Restoranlar yüklenemedi.",
+        "add_restaurant": "Restoran Ekle",
+        "edit_restaurant": "Restoran Düzenle",
+        "delete_confirm": "Bu restoranı sil?",
+        "edit": {
+            "title": "Restoran Düzenle: {{name}}",
+            "subtitle": "ID: {{id}} | Sahip: {{owner}}",
+            "back_btn": "Restoranlara Dön",
+            "fetch_error": "Restoran detayları yüklenemedi",
+            "update_success": "Restoran başarıyla güncellendi",
+            "update_error": "Restoran güncellenemedi",
+            "restaurant_not_found": "Restoran bulunamadı",
+            "fields": {
+                "phone": "Telefon",
+                "currency": "Para Birimi"
+            },
+            "buttons": {
+                "manage_branches": "Şubeleri Yönet",
+                "manage_menu": "Menüyü Yönet"
+            }
+        },
+        "table": {
+            "id": "ID",
+            "name": "İsim",
+            "owner": "Sahip",
+            "owner_email": "Sahip E-posta",
+            "address": "Adres",
+            "location": "Konum",
+            "status": "Durum",
+            "actions": "İşlemler"
+        }
+    },
+    "logs": {
+        "title": "Aktivite Kayıtları",
+        "activity": {
+            "title": "Aktivite Kayıtları",
+            "table": {
+                "time": "Zaman",
+                "user_id": "Kullanıcı ID",
+                "action": "İşlem",
+                "entity": "Varlık",
+                "details": "Detaylar",
+                "ip_address": "IP Adresi"
+            }
+        },
+        "audit": {
+            "title": "Denetim Kayıtları",
+            "subtitle": "Tüm yönetici işlemlerini ve sistem olaylarını takip edin",
+            "filters_btn": "Filtreler",
+            "export_csv": "CSV Dışa Aktar",
+            "filters": {
+                "username": "Kullanıcı Adı",
+                "username_placeholder": "Kullanıcı adına göre filtrele",
+                "action": "İşlem",
+                "all_actions": "Tüm İşlemler",
+                "entity_type": "Varlık Tipi",
+                "all_types": "Tüm Tipler",
+                "status": "Durum",
+                "all_statuses": "Tüm Durumlar",
+                "start_date": "Başlangıç Tarihi",
+                "end_date": "Bitiş Tarihi"
+            },
+            "clear_filters": "Tüm Filtreleri Temizle",
+            "loading": "Denetim kayıtları yükleniyor...",
+            "no_logs": "Denetim kaydı bulunamadı",
+            "view_details": "Detayları Gör",
+            "modal": {
+                "title": "Denetim Kaydı Detayları",
+                "user_agent": "Kullanıcı Ajanı",
+                "details_json": "Detaylar (JSON)"
+            },
+            "table": {
+                "timestamp": "Zaman Damgası",
+                "user": "Kullanıcı",
+                "action": "İşlem",
+                "entity": "Varlık",
+                "status": "Durum",
+                "ip": "IP",
+                "actions": "İşlemler"
+            },
+            "alerts": {
+                "fetch_error": "Denetim kayıtları yüklenemedi: "
+            }
+        },
+        "common": {
+            "loading": "Yükleniyor...",
+            "save": "Kaydet",
+            "cancel": "İptal",
+            "delete": "Sil",
+            "edit": "Düzenle",
+            "active": "Aktif",
+            "inactive": "Pasif",
+            "previous": "Önceki",
+            "next": "Sonraki",
+            "page_info": "Sayfa {{current}} / {{total}}",
+            "saving": "Kaydediliyor...",
+            "save_changes": "Değişiklikleri Kaydet"
+        }
+    }
+}

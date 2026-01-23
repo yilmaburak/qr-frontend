@@ -1,0 +1,37 @@
+{
+    "title": "Flexible Pricing for Every Need",
+    "subtitle": "Choose the perfect module for your business.",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "yearly_discount": "-20%",
+    "forever": "forever",
+    "mo": "mo",
+    "start_free": "Start Free",
+    "choose_plan": "Choose {{plan}}",
+    "popular": "POPULAR",
+    "more_features": "+ {{count}} more features",
+    "footer_note": "Prices are in USD. Secure payment processing via Stripe.",
+    "features_for": "Powerful features for {{module}}",
+    "modal": {
+        "title": "Confirm Subscription",
+        "desc": "Start your {{module}} - {{tier}} subscription?",
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "processing": "Processing..."
+    },
+    "login_modal": {
+        "title": "Account Required",
+        "desc": "PLEASE LOGIN TO SUBSCRIBE",
+        "login_btn": "Login / Register",
+        "cancel": "Cancel"
+    },
+    "messages": {
+        "success": "🎉 Successfully subscribed to {{module}}!",
+        "fail": "Failed to subscribe: {{error}}"
+    },
+    "modules": {
+        "QR_GENERATOR": "QR Generator",
+        "RESTAURANT": "Restaurant",
+        "ACCESS_CONTROL": "Access Control"
+    }
+}

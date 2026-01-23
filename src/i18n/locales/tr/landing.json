@@ -1,0 +1,125 @@
+{
+    "hero": {
+        "title": "Saniyeler İçinde Güzel QR Kodları Oluşturun",
+        "subtitle": "Özel tasarımlar, analitik ve daha fazlasıyla profesyonel QR kodları",
+        "cta_primary": "Ücretsiz Başla",
+        "cta_secondary": "Fiyatları Gör",
+        "trusted_by": "Dünya çapında 10.000+ işletme tarafından güveniliyor",
+        "login": "Giriş",
+        "get_started": "Başlayın",
+        "badge": "Yeni Özellik",
+        "title_part1": "QR Kodlarının",
+        "title_highlight": "Geleceği",
+        "title_part2": "Burada",
+        "generating": "Oluşturuluyor...",
+        "download_qr": "QR İndir",
+        "processing": "İşleniyor..."
+    },
+    "features": {
+        "title": "İhtiyacınız Olan Her Şey",
+        "subtitle": "Modern işletmeler için güçlü özellikler",
+        "custom_design": {
+            "title": "Özel Tasarımlar",
+            "description": "Markanıza uygun logolar, renkler ve çerçeveler ekleyin"
+        },
+        "analytics": {
+            "title": "Analitik ve Takip",
+            "promo_title": "Daha fazla güce mi ihtiyacınız var?",
+            "subtitle": "Dinamik QR'lar, Analitik ve vCard'lar için kaydolun.",
+            "dynamic_title": "Dinamik QR Kodları",
+            "dynamic_desc": "İçeriği yeniden basmadan istediğiniz zaman güncelleyin",
+            "analytics_title": "Gelişmiş Analitik",
+            "analytics_desc": "Taramaları, konumları ve kullanıcı davranışlarını takip edin",
+            "customization_title": "Tam Özelleştirme",
+            "customization_desc": "Logolar, renkler, çerçeveler ve GIF arka planları",
+            "security_title": "Kurumsal Güvenlik",
+            "security_desc": "Şifre koruması ve şifreleme"
+        },
+        "pricing": {
+            "title": "Basit, Şeffaf Fiyatlandırma",
+            "subtitle": "İhtiyaçlarınız için mükemmel planı seçin",
+            "free": "Ücretsiz",
+            "pro": "Pro",
+            "business": "İşletme",
+            "per_month": "/ay",
+            "get_started": "Başlayın"
+        },
+        "cta": {
+            "title": "Başlamaya Hazır Mısınız?",
+            "subtitle": "QR kodları kullanan binlerce işletmeye katılın",
+            "button": "İlk QR Kodunuzu Oluşturun"
+        },
+        "footer": {
+            "product": "Ürün",
+            "features": "Özellikler",
+            "pricing": "Fiyatlandırma",
+            "docs": "Dokümantasyon",
+            "company": "Şirket",
+            "about": "Hakkımızda",
+            "contact": "İletişim",
+            "blog": "Blog",
+            "legal": "Yasal",
+            "terms": "Kullanım Koşulları",
+            "privacy": "Gizlilik Politikası",
+            "copyright": "Tüm hakları saklıdır"
+        },
+        "features_list": {
+            "dynamic": {
+                "title": "Dinamik QR'lar",
+                "description": "Hedef URL'yi istediğiniz zaman düzenleyin."
+            },
+            "analytics": {
+                "title": "Analitik",
+                "description": "Gerçek zamanlı taramaları ve konumları takip edin."
+            },
+            "design": {
+                "title": "Özel Tasarım",
+                "description": "Logolar, renkler, noktalar ve çerçeveler."
+            },
+            "vcard": {
+                "title": "VCard ve PDF",
+                "description": "Kişileri ve belgeleri kolayca paylaşın."
+            }
+        }
+    },
+    "modules": {
+        "url": "URL",
+        "vcard": "vCard",
+        "file": "Dosya",
+        "linkpage": "Link Sayfası",
+        "google": "Google Form",
+        "menu": "Menü",
+        "app": "Uygulama Mağazası",
+        "landing": "Açılış Sayfası",
+        "smart": "Akıllı URL",
+        "gs1": "GS1 Dijital",
+        "mp3": "MP3",
+        "video": "Video",
+        "wifi": "Wifi",
+        "text": "Diğer"
+    },
+    "generator": {
+        "target_url": "Hedef URL",
+        "static_note": "Statik QR kodları için içeriğinizi barındırın ve bağlantıyı buraya yapıştırın.",
+        "ssid": "Ağ Adı (SSID)",
+        "password": "Şifre",
+        "encryption": "Şifreleme",
+        "first_name": "Ad",
+        "last_name": "Soyad",
+        "phone": "Telefon",
+        "email": "E-posta",
+        "org": "Kurum",
+        "your_text": "Metniniz",
+        "text_placeholder": "Buraya yazın...",
+        "style": "Stil",
+        "color": "Renk",
+        "background": "Arka Plan",
+        "empty_center": "Boş Merkez",
+        "remove": "Kaldır",
+        "upload_gif": "GIF Yükle",
+        "upload_image": "Resim Yükle",
+        "upload_logo": "Logo Yükle",
+        "bg_visibility": "Arka Plan Görünürlüğü",
+        "logo": "Logo"
+    }
+}

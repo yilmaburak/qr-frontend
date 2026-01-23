@@ -1,0 +1,119 @@
+import React, { useEffect, useState } from 'react';
+import { FaChartLine, FaShoppingBag, FaDollarSign, FaUtensils } from 'react-icons/fa';
+import { toast } from 'react-toastify';
+import analyticsService from '../services/analyticsService';
+import { AnalyticsSummary, RevenueData, PopularItemData } from '../types/restaurant';
+import { RevenueChart, PopularItemsChart } from '../components/restaurant/AnalyticsCharts';
+import SkeletonLoader from '../components/common/SkeletonLoader';
+
+const RestaurantAnalytics: React.FC = () => {
+    const [summary, setSummary] = useState<AnalyticsSummary | null>(null);
+    const [revenueData, setRevenueData] = useState<RevenueData[]>([]);
+    const [popularItems, setPopularItems] = useState<PopularItemData[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        try {
+            const [summaryRes, revenueRes, itemsRes] = await Promise.all([
+                analyticsService.getSummary(),
+                analyticsService.getRevenueChart(),
+                analyticsService.getPopularItemsChart()
+            ]);
+            setSummary(summaryRes);
+            setRevenueData(revenueRes);
+            setPopularItems(itemsRes);
+        } catch (error) {
+            console.error('Failed to load analytics', error);
+            toast.error('Failed to load analytics data');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    if (loading) {
+        return (
+            <div className="container mx-auto p-6 max-w-7xl">
+                <h1 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <FaChartLine className="text-indigo-600" /> Restaurant Analytics
+                </h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    {[1, 2, 3, 4].map(i => (
+                        <SkeletonLoader key={i} height={120} className="rounded-xl" />
+                    ))}
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <SkeletonLoader height={400} className="rounded-xl" />
+                    <SkeletonLoader height={400} className="rounded-xl" />
+                </div>
+            </div>
+        );
+    }
+
+    return (
+        <div className="container mx-auto p-6 max-w-7xl">
+            <h1 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                <FaChartLine className="text-indigo-600" /> Restaurant Analytics
+            </h1>
+
+            {/* Stats Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <StatsCard
+                    title="Total Revenue"
+                    value={`$${summary?.totalRevenue?.toFixed(2) || '0.00'}`}
+                    icon={<FaDollarSign />}
+                    color="bg-green-100 text-green-600"
+                />
+                <StatsCard
+                    title="Total Orders"
+                    value={summary?.totalOrders || 0}
+                    icon={<FaShoppingBag />}
+                    color="bg-blue-100 text-blue-600"
+                />
+                {/* Placeholders for future metrics */}
+                <StatsCard
+                    title="Avg. Order Value"
+                    value={`$${summary?.totalOrders ? (summary.totalRevenue / summary.totalOrders).toFixed(2) : '0.00'}`}
+                    icon={<FaChartLine />}
+                    color="bg-purple-100 text-purple-600"
+                />
+                <StatsCard
+                    title="Top Item"
+                    value={popularItems[0]?.name || '-'}
+                    icon={<FaUtensils />}
+                    color="bg-orange-100 text-orange-600"
+                />
+            </div>
+
+            {/* Charts */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <RevenueChart data={revenueData} />
+                <PopularItemsChart data={popularItems} />
+            </div>
+        </div>
+    );
+};
+
+interface StatsCardProps {
+    title: string;
+    value: string | number;
+    icon: React.ReactNode;
+    color: string;
+}
+
+const StatsCard: React.FC<StatsCardProps> = ({ title, value, icon, color }) => (
+    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4 transition hover:shadow-md">
+        <div className={`w-14 h-14 rounded-full flex items-center justify-center text-2xl ${color}`}>
+            {icon}
+        </div>
+        <div>
+            <p className="text-sm font-medium text-gray-500 mb-1">{title}</p>
+            <h3 className="text-2xl font-bold text-gray-800">{value}</h3>
+        </div>
+    </div>
+);
+
+export default RestaurantAnalytics;

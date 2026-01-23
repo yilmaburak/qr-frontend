@@ -1,0 +1,177 @@
+{
+    "access_pass": {
+        "title": "My Access Pass",
+        "subtitle": "Use this QR code to access restricted areas",
+        "refreshes_in": "Refreshes in:",
+        "instructions_title": "Access Instructions",
+        "instruction_1": "Show this QR code to the security guard scanner.",
+        "instruction_2": "Ensure your screen brightness is high.",
+        "instruction_3": "This code is dynamic and expires every 30 seconds. Do not screenshot.",
+        "loading": "Loading..."
+    },
+    "generator": {
+        "title": "Create QR Code",
+        "subtitle": "Design your custom QR code with premium styles",
+        "sections": {
+            "templates": "Templates & Presets",
+            "basic_info": "Basic Information",
+            "branding": "Branding & Backgrounds",
+            "security": "Security (Pro)",
+            "advanced": "Advanced Customization",
+            "frames": "Frames & Text"
+        },
+        "labels": {
+            "title": "Title",
+            "description": "Description",
+            "network_name": "Network Name (SSID)",
+            "password": "Password",
+            "encryption": "Encryption",
+            "first_name": "First Name",
+            "last_name": "Last Name",
+            "mobile_phone": "Mobile Phone",
+            "work_phone": "Work Phone",
+            "company": "Company",
+            "job_title": "Job Title",
+            "website": "Website",
+            "street": "Street",
+            "city": "City",
+            "zip": "Zip",
+            "country": "Country",
+            "foreground_color": "Foreground Color",
+            "background_color": "Background Color",
+            "eye_style": "Eye Style (Position Patterns)",
+            "dot_style": "Dot Style",
+            "logo": "Logo",
+            "background_image": "Background Image (Static)",
+            "gif_background": "GIF Background (Animated)",
+            "background_visibility": "Background Visibility",
+            "frame_style": "Frame Style",
+            "frame_color": "Frame Color",
+            "frame_text": "Frame Text",
+            "frame_text_color": "Frame Text Color",
+            "frame_text_position": "Frame Text Position",
+            "phone": "Phone",
+            "address": "Address",
+            "upload_logo_opt": "Upload Logo (optional)"
+        },
+        "placeholders": {
+            "title": "My Awesome QR",
+            "description": "Optional description",
+            "wifi_ssid": "MyWifi",
+            "wifi_password": "Secret Pass",
+            "text_content": "Type anything here...",
+            "url": "https://example.com",
+            "template_name": "Template Name",
+            "set_password": "Set a password (Optional)"
+        },
+        "buttons": {
+            "save_template": "Save as Template",
+            "upload_logo": "Upload Logo",
+            "upload_background": "Upload Image Background",
+            "upload_gif": "Upload GIF Background",
+            "remove": "Remove",
+            "apply_template": "Apply Template",
+            "delete_template": "Delete this template?",
+            "create_qr": "Create QR Code"
+        },
+        "info": {
+            "save_design": "Save this design (colors, style, logo, GIF, background) to reuse later",
+            "dynamic_qr": "Edit content anytime without changing the QR image",
+            "password_protection": "Restrict access to your QR code content. Scanners must enter this password to proceed.",
+            "auto_colors": "Colors will be automatically extracted from your GIF background",
+            "gif_loaded": "GIF Loaded",
+            "vividness": "Vividness",
+            "subtle_scannable": "Subtle (Scannable)",
+            "vivid_full_color": "Vivid (Full Color)",
+            "file_size_limit": "File Size Limit:",
+            "max_size": "Maximum size"
+        },
+        "styles": {
+            "square": "Square",
+            "dots": "Dots",
+            "rounded": "Rounded",
+            "circle": "Circle",
+            "classy": "Classic",
+            "extra_rounded": "Extra Rounded"
+        },
+        "frames": {
+            "none": "None",
+            "banner": "Banner",
+            "box": "Box",
+            "bottom": "Bottom",
+            "top": "Top"
+        },
+        "encryption": {
+            "wpa": "WPA/WPA2",
+            "wep": "WEP",
+            "nopass": "No Encryption"
+        },
+        "messages": {
+            "template_saved": "Template saved!",
+            "template_deleted": "Template deleted",
+            "failed_save": "Failed to save template",
+            "failed_delete": "Failed to delete",
+            "enter_content": "Please enter content for the QR Code",
+            "wait_preview": "Please wait for preview to generate",
+            "qr_created": "QR Code successfully created!",
+            "qr_failed": "Failed to create QR Code!",
+            "upload_gif_error": "Please upload a valid GIF file",
+            "upload_success": "File uploaded successfully!",
+            "upload_failed": "Upload failed",
+            "file_too_large": "File is too large for your subscription tier",
+            "too_many_uploads": "Too many uploads. Please wait a moment."
+        },
+        "features": {
+            "dynamic_qr": "Dynamic QR Code",
+            "pro_feature": "Pro Feature",
+            "password_protection": "Password Protection",
+            "auto_color_extraction": "Auto Colors (GIF Palette)",
+            "extract_colors": "Extract Colors from GIF"
+        },
+        "status": {
+            "loading": "Generating preview...",
+            "dynamic": "Dynamic QR (Editable Content)",
+            "static": "Static QR (Permanent Content)"
+        }
+    },
+    "edit": {
+        "title": "Edit QR Code",
+        "update_button": "Update QR",
+        "content": "Content (URL, Text, etc)",
+        "not_found": "QR Code not found",
+        "load_error": "Failed to load QR code",
+        "success_update": "QR Code updated",
+        "update_error": "Failed to update QR code"
+    },
+    "template": {
+        "select_title": "Select Template",
+        "create_new": "Create New Template",
+        "quick_presets": "Quick Presets",
+        "your_templates": "Your Templates",
+        "loading": "Loading templates...",
+        "applied": "Applied \"{{name}}\" template",
+        "create_title": "Create QR Template",
+        "design_custom": "Design your custom style",
+        "name_label": "Template Name",
+        "name_placeholder": "My Menu Template",
+        "pattern_style": "QR Pattern Style",
+        "eye_style": "Eye Style",
+        "live_preview": "Live Preview",
+        "preview_text": "This is how your QR code will look",
+        "save_apply": "Save & Apply Template",
+        "saving": "Saving...",
+        "save_success": "Template saved!",
+        "save_error": "Failed to save template",
+        "enter_name_error": "Please enter a template name"
+    },
+    "unlock_qr": {
+        "title": "Welcome",
+        "subtitle": "Please enter the password to view this content",
+        "password_label": "Password",
+        "password_placeholder": "Enter password",
+        "unlock_button": "Unlock Content",
+        "unlocking": "Unlocking...",
+        "success_redirect": "Unlocked! Redirecting...",
+        "error_incorrect": "Incorrect password. Please try again."
+    }
+}

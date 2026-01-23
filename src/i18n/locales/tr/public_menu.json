@@ -1,0 +1,85 @@
+{
+    "header": {
+        "welcome": "Hoş Geldiniz",
+        "search_placeholder": "Menüde ara...",
+        "language": "Dil",
+        "dark_mode": "Karanlık Mod",
+        "light_mode": "Aydınlık Mod"
+    },
+    "categories": {
+        "all": "Tüm Ürünler",
+        "appetizers": "Mezeler",
+        "soups": "Çorbalar",
+        "salads": "Salatalar",
+        "main_courses": "Ana Yemekler",
+        "pasta": "Makarna",
+        "pizza": "Pizza",
+        "burgers": "Burgerler",
+        "seafood": "Deniz Ürünleri",
+        "desserts": "Tatlılar",
+        "beverages": "İçecekler",
+        "hot_drinks": "Sıcak İçecekler",
+        "cold_drinks": "Soğuk İçecekler",
+        "alcohol": "Alkollü İçecekler"
+    },
+    "labels": {
+        "price": "Fiyat",
+        "available": "Mevcut",
+        "unavailable": "Mevcut Değil",
+        "out_of_stock": "Tükendi",
+        "popular": "Popüler",
+        "new": "Yeni",
+        "recommended": "Önerilen",
+        "spicy": "Acılı",
+        "vegetarian": "Vejeteryan",
+        "vegan": "Vegan",
+        "gluten_free": "Glütensiz",
+        "dairy_free": "Sütsüz",
+        "contains_nuts": "Fındık/Fıstık İçerir",
+        "halal": "Helal",
+        "kosher": "Koşer"
+    },
+    "actions": {
+        "order_now": "Sipariş Ver",
+        "add_to_cart": "Sepete Ekle",
+        "view_details": "Detayları Gör",
+        "customize": "Özelleştir",
+        "back": "Geri",
+        "close": "Kapat",
+        "apply_filters": "Filtreleri Uygula",
+        "clear_filters": "Filtreleri Temizle"
+    },
+    "search": {
+        "no_results": "Ürün bulunamadı",
+        "try_different": "Farklı bir arama terimi deneyin",
+        "showing_results": "Sonuçlar gösteriliyor:"
+    },
+    "filters": {
+        "title": "Filtreler",
+        "dietary": "Diyet Tercihleri",
+        "price_range": "Fiyat Aralığı",
+        "availability": "Mevcut Olanlar",
+        "sort_by": "Sıralama",
+        "price_low_high": "Fiyat: Düşükten Yükseğe",
+        "price_high_low": "Fiyat: Yüksekten Düşüğe",
+        "name_az": "İsim: A-Z",
+        "popularity": "En Popüler"
+    },
+    "item_details": {
+        "description": "Açıklama",
+        "ingredients": "İçindekiler",
+        "allergens": "Alerjenler",
+        "nutritional_info": "Besin Değerleri",
+        "calories": "Kalori",
+        "portion_size": "Porsiyon Boyutu",
+        "preparation_time": "Hazırlanma Süresi",
+        "minutes": "dakika"
+    },
+    "footer": {
+        "powered_by": "Destekleyen",
+        "contact_us": "İletişim",
+        "about": "Hakkında",
+        "privacy": "Gizlilik Politikası",
+        "terms": "Kullanım Koşulları"
+    }
+}

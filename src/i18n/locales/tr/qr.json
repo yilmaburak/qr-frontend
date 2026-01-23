@@ -1,0 +1,177 @@
+{
+    "access_pass": {
+        "title": "Erişim Kartım",
+        "subtitle": "Kısıtlı alanlara girmek için bu QR kodunu kullanın",
+        "refreshes_in": "Yenilenme:",
+        "instructions_title": "Erişim Talimatları",
+        "instruction_1": "Bu QR kodu güvenlik görevlisine gösterin.",
+        "instruction_2": "Ekran parlaklığınızın yüksek olduğundan emin olun.",
+        "instruction_3": "Bu kod dinamiktir ve her 30 saniyede bir değişir. Ekran görüntüsü almayın.",
+        "loading": "Yükleniyor..."
+    },
+    "create": {
+        "title": "QR Kodu Oluştur",
+        "subtitle": "Premium stillerle özel QR kodunuzu tasarlayın",
+        "sections": {
+            "templates": "Şablonlar ve Ön Ayarlar",
+            "basic_info": "Temel Bilgiler",
+            "branding": "Marka ve Arka Planlar",
+            "security": "Güvenlik (Pro)",
+            "advanced": "Gelişmiş Özelleştirme",
+            "frames": "Çerçeveler ve Metin"
+        },
+        "labels": {
+            "title": "Başlık",
+            "description": "Açıklama",
+            "network_name": "Ağ Adı (SSID)",
+            "password": "Şifre",
+            "encryption": "Şifreleme",
+            "first_name": "Ad",
+            "last_name": "Soyad",
+            "mobile_phone": "Cep Telefonu",
+            "work_phone": "İş Telefonu",
+            "company": "Şirket",
+            "job_title": "İş Ünvanı",
+            "website": "Web Sitesi",
+            "street": "Sokak",
+            "city": "Şehir",
+            "zip": "Posta Kodu",
+            "country": "Ülke",
+            "foreground_color": "Ön Plan Rengi",
+            "background_color": "Arka Plan Rengi",
+            "eye_style": "Göz Stili (Konum Desenleri)",
+            "dot_style": "Nokta Stili",
+            "logo": "Logo",
+            "background_image": "Arka Plan Resmi (Sabit)",
+            "gif_background": "GIF Arka Plan (Animasyonlu)",
+            "background_visibility": "Arka Plan Görünürlüğü",
+            "frame_style": "Çerçeve Stili",
+            "frame_color": "Çerçeve Rengi",
+            "frame_text": "Çerçeve Metni",
+            "frame_text_color": "Çerçeve Metin Rengi",
+            "frame_text_position": "Çerçeve Metin Konumu",
+            "phone": "Telefon",
+            "address": "Adres",
+            "upload_logo_opt": "Logo Yükle (İsteğe bağlı)"
+        },
+        "placeholders": {
+            "title": "Harika QR Kodum",
+            "description": "İsteğe bağlı açıklama",
+            "wifi_ssid": "BenimWifi",
+            "wifi_password": "Gizli Şifre",
+            "text_content": "Buraya istediğiniz şeyi yazın...",
+            "url": "https://ornek.com",
+            "template_name": "Şablon Adı",
+            "set_password": "Bir şifre belirleyin (İsteğe bağlı)"
+        },
+        "buttons": {
+            "save_template": "Şablon Olarak Kaydet",
+            "upload_logo": "Logo Yükle",
+            "upload_background": "Arka Plan Resmi Yükle",
+            "upload_gif": "GIF Arka Plan Yükle",
+            "remove": "Kaldır",
+            "apply_template": "Şablonu Uygula",
+            "delete_template": "Bu şablonu sil?",
+            "create_qr": "QR Kodu Oluştur"
+        },
+        "info": {
+            "save_design": "Bu tasarımı (renkler, stil, logo, GIF, arka plan) daha sonra kullanmak üzere kaydedin",
+            "dynamic_qr": "QR görüntüsünü değiştirmeden içeriği istediğiniz zaman düzenleyin",
+            "password_protection": "QR kod içeriğinize erişimi kısıtlayın. Tarayıcılar devam etmek için bu şifreyi girmelidir.",
+            "auto_colors": "Renkler GIF arka planınızdan otomatik olarak çıkarılacak",
+            "gif_loaded": "GIF Yüklendi",
+            "vividness": "Canlılık",
+            "subtle_scannable": "İnce (Taranabilir)",
+            "vivid_full_color": "Canlı (Tam Renk)",
+            "file_size_limit": "Dosya Boyutu Limiti:",
+            "max_size": "Maksimum boyut"
+        },
+        "styles": {
+            "square": "Kare",
+            "dots": "Noktalar",
+            "rounded": "Yuvarlatılmış",
+            "circle": "Daire",
+            "classy": "Klasik",
+            "extra_rounded": "Ekstra Yuvarlatılmış"
+        },
+        "frames": {
+            "none": "Yok",
+            "banner": "Banner",
+            "box": "Kutu",
+            "bottom": "Alt",
+            "top": "Üst"
+        },
+        "encryption": {
+            "wpa": "WPA/WPA2",
+            "wep": "WEP",
+            "nopass": "Şifreleme Yok"
+        },
+        "messages": {
+            "template_saved": "Şablon kaydedildi!",
+            "template_deleted": "Şablon silindi",
+            "failed_save": "Şablon kaydedilemedi",
+            "failed_delete": "Silinemedi",
+            "enter_content": "Lütfen QR Kodu için içerik girin",
+            "wait_preview": "Lütfen önizlemenin oluşmasını bekleyin",
+            "qr_created": "QR Kodu başarıyla oluşturuldu!",
+            "qr_failed": "QR Kodu oluşturulamadı!",
+            "upload_gif_error": "Lütfen geçerli bir GIF dosyası yükleyin",
+            "upload_success": "Dosya başarıyla yüklendi!",
+            "upload_failed": "Yükleme başarısız oldu",
+            "file_too_large": "Dosya abonelik seviyeniz için çok büyük",
+            "too_many_uploads": "Çok fazla yükleme. Lütfen bir süre bekleyin."
+        },
+        "features": {
+            "dynamic_qr": "Dinamik QR Kodu",
+            "pro_feature": "Pro Özellik",
+            "password_protection": "Şifre Koruması",
+            "auto_color_extraction": "Otomatik Renkler (GIF Paleti)",
+            "extract_colors": "GIF'ten Renkleri Çıkar"
+        },
+        "status": {
+            "loading": "Önizleme oluşturuluyor...",
+            "dynamic": "Dinamik QR (Düzenlenebilir İçerik)",
+            "static": "Sabit QR (Kalıcı İçerik)"
+        }
+    },
+    "edit": {
+        "title": "QR Kodunu Düzenle",
+        "update_button": "QR'ı Güncelle",
+        "content": "İçerik (URL, Metin, vb)",
+        "not_found": "QR Kodu bulunamadı",
+        "load_error": "QR kodu yüklenemedi",
+        "success_update": "QR Kodu güncellendi",
+        "update_error": "QR kodu güncellenemedi"
+    },
+    "template": {
+        "select_title": "Şablon Seç",
+        "create_new": "Yeni Şablon Oluştur",
+        "quick_presets": "Hızlı Şablonlar",
+        "your_templates": "Şablonlarınız",
+        "loading": "Şablonlar yükleniyor...",
+        "applied": "\"{{name}}\" şablonu uygulandı",
+        "create_title": "QR Şablonu Oluştur",
+        "design_custom": "Kendi stilinizi tasarlayın",
+        "name_label": "Şablon Adı",
+        "name_placeholder": "Menü Şablonum",
+        "pattern_style": "QR Desen Stili",
+        "eye_style": "Göz Stili",
+        "live_preview": "Canlı Önizleme",
+        "preview_text": "QR kodunuz böyle görünecek",
+        "save_apply": "Kaydet ve Uygula",
+        "saving": "Kaydediliyor...",
+        "save_success": "Şablon kaydedildi!",
+        "save_error": "Şablon kaydedilemedi",
+        "enter_name_error": "Lütfen bir şablon adı girin"
+    },
+    "unlock_qr": {
+        "title": "Hoş Geldiniz",
+        "subtitle": "Bu içeriği görüntülemek için lütfen şifreyi girin",
+        "password_label": "Şifre",
+        "password_placeholder": "Şifreyi girin",
+        "unlock_button": "İçeriği Aç",
+        "unlocking": "Açılıyor...",
+        "success_redirect": "Açıldı! Yönlendiriliyor...",
+        "error_incorrect": "Hatalı şifre. Lütfen tekrar deneyin."
+    }
+}

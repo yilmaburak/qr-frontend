@@ -1,0 +1,85 @@
+{
+    "header": {
+        "welcome": "Welcome to",
+        "search_placeholder": "Search menu...",
+        "language": "Language",
+        "dark_mode": "Dark Mode",
+        "light_mode": "Light Mode"
+    },
+    "categories": {
+        "all": "All Items",
+        "appetizers": "Appetizers",
+        "soups": "Soups",
+        "salads": "Salads",
+        "main_courses": "Main Courses",
+        "pasta": "Pasta",
+        "pizza": "Pizza",
+        "burgers": "Burgers",
+        "seafood": "Seafood",
+        "desserts": "Desserts",
+        "beverages": "Beverages",
+        "hot_drinks": "Hot Drinks",
+        "cold_drinks": "Cold Drinks",
+        "alcohol": "Alcoholic Beverages"
+    },
+    "labels": {
+        "price": "Price",
+        "available": "Available",
+        "unavailable": "Unavailable",
+        "out_of_stock": "Out of Stock",
+        "popular": "Popular",
+        "new": "New",
+        "recommended": "Recommended",
+        "spicy": "Spicy",
+        "vegetarian": "Vegetarian",
+        "vegan": "Vegan",
+        "gluten_free": "Gluten Free",
+        "dairy_free": "Dairy Free",
+        "contains_nuts": "Contains Nuts",
+        "halal": "Halal",
+        "kosher": "Kosher"
+    },
+    "actions": {
+        "order_now": "Order Now",
+        "add_to_cart": "Add to Cart",
+        "view_details": "View Details",
+        "customize": "Customize",
+        "back": "Back",
+        "close": "Close",
+        "apply_filters": "Apply Filters",
+        "clear_filters": "Clear Filters"
+    },
+    "search": {
+        "no_results": "No items found",
+        "try_different": "Try a different search term",
+        "showing_results": "Showing results for"
+    },
+    "filters": {
+        "title": "Filters",
+        "dietary": "Dietary Preferences",
+        "price_range": "Price Range",
+        "availability": "Availability",
+        "sort_by": "Sort By",
+        "price_low_high": "Price: Low to High",
+        "price_high_low": "Price: High to Low",
+        "name_az": "Name: A-Z",
+        "popularity": "Most Popular"
+    },
+    "item_details": {
+        "description": "Description",
+        "ingredients": "Ingredients",
+        "allergens": "Allergens",
+        "nutritional_info": "Nutritional Information",
+        "calories": "Calories",
+        "portion_size": "Portion Size",
+        "preparation_time": "Preparation Time",
+        "minutes": "minutes"
+    },
+    "footer": {
+        "powered_by": "Powered by",
+        "contact_us": "Contact Us",
+        "about": "About",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+    }
+}
